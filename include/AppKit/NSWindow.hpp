@@ -27,6 +27,7 @@
 
 #include "AppKitPrivate.hpp"
 #include "NSView.hpp"
+#include "NSApplication.hpp"
 #include <Foundation/NSObject.hpp>
 
 #include <CoreGraphics/CGGeometry.h>
