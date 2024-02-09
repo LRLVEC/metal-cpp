@@ -52,6 +52,9 @@ public:
     CGSize                   drawableSize() const;
     void                     setDrawableSize(CGSize drawableSize);
 
+    bool                     displaySyncEnabled() const;
+    void                     setDisplaySyncEnabled(bool displaySyncEnabled);
+
     class MetalDrawable*     nextDrawable();
 };
 } // namespace CA
@@ -120,6 +123,19 @@ _CA_INLINE void CA::MetalLayer::setDrawableSize(CGSize drawableSize)
 {
     return Object::sendMessage<void>(this, _CA_PRIVATE_SEL(setDrawableSize_),
         drawableSize);
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+_CA_INLINE bool CA::MetalLayer::displaySyncEnabled() const
+{
+    return Object::sendMessage<bool>(this, _CA_PRIVATE_SEL(displaySyncEnabled));
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+_CA_INLINE void CA::MetalLayer::setDisplaySyncEnabled(bool displaySyncEnabled)
+{
+    return Object::sendMessage<void>(this, _CA_PRIVATE_SEL(setDisplaySyncEnabled_),
+        displaySyncEnabled);
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
