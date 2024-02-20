@@ -107,6 +107,8 @@ namespace Private
             "device");
         _CA_PRIVATE_DEF_SEL(drawableSize,
             "drawableSize");
+        _CA_PRIVATE_DEF_SEL(contentsScale,
+            "contentsScale");
         _CA_PRIVATE_DEF_SEL(displaySyncEnabled,
             "displaySyncEnabled");
         _CA_PRIVATE_DEF_SEL(framebufferOnly,

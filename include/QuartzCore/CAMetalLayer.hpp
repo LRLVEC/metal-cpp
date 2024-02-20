@@ -49,6 +49,8 @@ public:
     bool                     framebufferOnly() const;
     void                     setFramebufferOnly(bool framebufferOnly);
 
+    CGFloat                  contentsScale() const;
+
     CGSize                   drawableSize() const;
     void                     setDrawableSize(CGSize drawableSize);
 
@@ -108,6 +110,13 @@ _CA_INLINE void CA::MetalLayer::setFramebufferOnly(bool framebufferOnly)
 {
     return Object::sendMessage<void>(this, _CA_PRIVATE_SEL(setFramebufferOnly_),
         framebufferOnly);
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+_CA_INLINE CGFloat CA::MetalLayer::contentsScale() const
+{
+    return Object::sendMessage<CGFloat>(this, _CA_PRIVATE_SEL(contentsScale));
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
